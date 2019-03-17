@@ -23,10 +23,10 @@ public class TempConverter extends HttpServlet {
 //		Double value2 = Double.parseDouble(request.getParameter("value2"));
 		switch (request.getParameter("oper")) {
 		case "Fahrenheit":
-			response.getWriter().println("Fahrenheit to celc: " + ((9/5)*(value1) + 32));
+			response.getWriter().println("Celcius: " + ((9/5 * value1) + 32));
 			break;
 		case "Celcius":
-			response.getWriter().println("Celcjus to Fahrenheit: " + ((5/9 * value1 ) - 32));
+			response.getWriter().println("Fahrenheit: " + ((value1 - 32) * 5/9));
 			break;
 		}
 	}
